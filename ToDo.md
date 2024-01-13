@@ -5,6 +5,7 @@
 + add frames
 + add animation functions
 + MVP
+>progress<
 - add color support
 - add geometry
 - add 3d geometry
