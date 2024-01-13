@@ -1,8 +1,10 @@
 # ToDo
 
-- add frames
-- add animation functions
-- MVP
++ add main loop
++ add animations
++ add frames
++ add animation functions
++ MVP
 - add color support
 - add geometry
 - add 3d geometry
