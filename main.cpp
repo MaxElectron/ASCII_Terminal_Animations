@@ -16,6 +16,16 @@ int main()
     // run the animation
     while (true)
     {
+        // update the animation
+        std::vector<ascii_animation::frame> frames {};
+        frames.emplace_back(0, 0, '#', ascii_animation::red);
+        frames.emplace_back(0, 0, '#', ascii_animation::yellow);
+        frames.emplace_back(0, 0, '#', ascii_animation::green);
+        frames.emplace_back(0, 0, '#', ascii_animation::blue);
+        frames.emplace_back(0, 0, '#', ascii_animation::magenta);
+        animation.update_frames(frames);
+
+        // render the animation
         ascii_animation::clear();
         ascii_animation::render(animation.get_frame());
         animation.advance();

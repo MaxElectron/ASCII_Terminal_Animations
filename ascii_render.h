@@ -66,8 +66,6 @@ namespace ascii_animation
         public:
         long long frame_duration_microseconds = 41666;
 
-        animation() = default;
-
         animation(std::vector<frame> input_frames) : frames(input_frames) {};
 
         void advance()
@@ -84,6 +82,12 @@ namespace ascii_animation
         void set_fps(size_t fps)
         {
             frame_duration_microseconds = static_cast<long long>(1000000 * (1.0 / fps));
+        }
+
+        void update_frames(std::vector<frame> input_frames)
+        {
+            frames = input_frames;
+            current_frame %= frames.size();
         }
     };
 
